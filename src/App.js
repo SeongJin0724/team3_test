@@ -6,6 +6,7 @@ import "./App.css";
 const Home = lazy(() => import("./pages/Home"));
 const Pages1 = lazy(() => import("./pages/Pages1"));
 const Pages2 = lazy(() => import("./pages/Pages2"));
+const Pages3 = lazy(() => import("./pages/Pages3"));
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/pages1" element={<Pages1 />} />
           <Route path="/pages2" element={<Pages2 />} />
+          <Route path="/pages3" element={<Pages3 />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

@@ -7,19 +7,24 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.8",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.0",
     "jwt": "^0.2.0",
     "mysql": "^2.18.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "sass": "^1.72.0",
     "scss": "^0.2.4",
     "web-vitals": "^2.1.4",
     "yarn": "^1.22.22"
   },
+  "proxy": "http://localhost:4000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -44,5 +49,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/SeongJin0724/team3_test.git",
+  "author": "lsj <thls702464@gmail.com>",
+  "license": "MIT"
 }
