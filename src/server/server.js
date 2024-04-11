@@ -43,6 +43,26 @@ app.post('/api/signup', async (req, res) => {
   });
 });
 
+// 로그인 API
+app.post('/api/login', async (req, res) => {
+  const { email, password } = req.body;
+  
+  const sql = 'SELECT * FROM user WHERE email = ?';
+  db.query(sql, [email], async (err, result) => {
+    if (err) throw err;
+    if (result.length > 0) {
+      const comparison = await bcrypt.compare(password, result[0].password);
+      if (comparison) {
+        res.send({ message: 'Logged in successfully!' });
+        // 로그인 성공 시 추가 로직
+      } else {
+        res.status(401).send({ message: 'Invalid email or password' });
+      }
+    } else {
+      res.status(404).send({ message: 'User not found' });
+    }
+  });
+});
 
 app.get("/product", (req, res) => {
   db.query("select * from itemForm", (err, data) => {
