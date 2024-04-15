@@ -38,8 +38,8 @@ app.post('/api/signup', async (req, res) => {
   const { user_id, roleKey, name, email, password, tel, dateJoined, address } = req.body;
   const hashedPassword = await bcrypt.hash(password, 8);
 
-  const sql = 'INSERT INTO user2 (user_id, roleKey, name, email, password, tel, dateJoined, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
-  db.query(sql, [user_id, roleKey, name, email, hashedPassword, tel, dateJoined, address], (err, result) => {
+  const sql = 'INSERT INTO user (user_id, name, email, password, tel, dateJoined, address) VALUES (?, ?, ?, ?, ?, ?, ?)';
+  db.query(sql, [user_id, name, email, hashedPassword, tel, dateJoined, address], (err, result) => {
     if (err) throw err;
     res.send({ message: 'User registered successfully!' });
   });
@@ -49,7 +49,7 @@ app.post('/api/signup', async (req, res) => {
 app.post('/api/login', async (req, res) => {
   const { email, password } = req.body;
   
-  const sql = 'SELECT * FROM user2 WHERE email = ?';
+  const sql = 'SELECT * FROM user WHERE email = ?';
   db.query(sql, [email], async (err, result) => {
     if (err) throw err;
     if (result.length > 0) {
