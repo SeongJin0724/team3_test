@@ -8,6 +8,8 @@ const bodyParser = require('body-parser');
 const cors = require("cors");
 const db = require("./config/db");
 const bcrypt = require("bcrypt");
+app.set("views", __dirname + "/components/contents");
+app.set("view engine", "jsx");
 // const jwt = require("jsonwebtoken");
 
 app.use(express.json());
@@ -33,11 +35,11 @@ app.get("/", (req, res) => {
 
 // 회원가입 API
 app.post('/api/signup', async (req, res) => {
-  const { user_id, name, email, password, tel, dateJoined, address } = req.body;
+  const { user_id, roleKey, name, email, password, tel, dateJoined, address } = req.body;
   const hashedPassword = await bcrypt.hash(password, 8);
 
-  const sql = 'INSERT INTO user (user_id, name, email, password, tel, dateJoined, address) VALUES (?, ?, ?, ?, ?, ?, ?)';
-  db.query(sql, [user_id, name, email, hashedPassword, tel, dateJoined, address], (err, result) => {
+  const sql = 'INSERT INTO user2 (user_id, roleKey, name, email, password, tel, dateJoined, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
+  db.query(sql, [user_id, roleKey, name, email, hashedPassword, tel, dateJoined, address], (err, result) => {
     if (err) throw err;
     res.send({ message: 'User registered successfully!' });
   });
@@ -47,7 +49,7 @@ app.post('/api/signup', async (req, res) => {
 app.post('/api/login', async (req, res) => {
   const { email, password } = req.body;
   
-  const sql = 'SELECT * FROM user WHERE email = ?';
+  const sql = 'SELECT * FROM user2 WHERE email = ?';
   db.query(sql, [email], async (err, result) => {
     if (err) throw err;
     if (result.length > 0) {
@@ -70,6 +72,16 @@ app.get("/product", (req, res) => {
       res.send(data);
     } else {
       console.log(err);
+    }
+  });
+});
+
+app.get("/list", function (request, response) {
+  db.query("SELECT * FROM item", function (error, results) {
+    if (!error) {
+      /*response.render("list", { data: results });*/response.send(results);
+    } else {
+      console.log("Error");
     }
   });
 });

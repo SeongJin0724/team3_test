@@ -35,6 +35,7 @@ export default function Signup() {
     <form onSubmit={handleSubmit}>
       <h2>회원가입</h2>
       <input type="text" name="user_id" placeholder="User ID" onChange={handleChange} required />
+      <input type="number" name="roleKey" placeholder="roleKey" onChange={handleChange} required />
       <input type="text" name="name" placeholder="Name" onChange={handleChange} required />
       <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
       <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
