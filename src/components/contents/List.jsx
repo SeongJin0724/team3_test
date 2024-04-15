@@ -17,7 +17,7 @@ useEffect(() => {
   return (
  <ul>
   {data.map((item,index) => (
-    <li key={item.user_id}>{`Name:${item.name} Img:${item.img} Description:${item.description} Price:${item.price}`}</li>
+    <li key={item.itemKey}>{`title:${item.title} Img:${item.img} Description:${item.description} brand:${item.brand}`}</li>
   ))}
  </ul>
   )
