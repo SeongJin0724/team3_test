@@ -1,7 +1,7 @@
 // mysql 연결할 정보 입력 파일
 // 기본구성
 
-let mariadb = require("mariadb");
+let mariadb = require("mysql");
 /*const db = mysql.createPool({
   host: "59.29.225.162",
   user: "team3_data",

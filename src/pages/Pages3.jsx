@@ -3,7 +3,5 @@ import Main from '../components/section/Main'
 import Signup from '../components/contents/Signup'
 
 export default function Pages3() {
-  return (
-    <Signup />
-  )
+  return <Main><Signup /></Main>;
 }

@@ -66,6 +66,26 @@ app.post('/api/login', async (req, res) => {
   });
 });
 
+app.post('/api/ee', async (req, res) => {
+  const {formKey, user_id, title, img, description, price, addDate, sign } = req.body;
+  const query = `
+    INSERT INTO itemForm (formKey, user_id, title, img, description, price, addDate, sign)
+    VALUES (?, ?, ?, ?, ?, ?, NOW(), false);
+  `;
+
+  // 쿼리 실행
+  db.query(query, [formKey, user_id, title, img, description, price], (error, results, fields) => {
+    if (error) {
+      // 에러 처리
+      console.error('상품 판매 신청 중 에러 발생:', error);
+      return;
+    }
+
+    // 성공적으로 쿼리 실행
+    console.log('상품 판매 신청 성공:', results);
+  });
+});
+
 app.get("/product", (req, res) => {
   db.query("select * from itemForm", (err, data) => {
     if (!err) {
