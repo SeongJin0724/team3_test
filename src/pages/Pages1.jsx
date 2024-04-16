@@ -19,9 +19,7 @@ export default function Pages1() {
     <Main>
       <ul>
         {data.map((item, index) => (
-          <li key={item.formKey}>
-            {`Name:${item.name} Img:${item.img} Description:${item.description} Price:${item.price} TEL:${item.tel} `}{" "}
-          </li>
+          <li key={item.formKey}>{`Name:${item.name} TEL:${item.tel} `} </li>
         ))}
       </ul>
     </Main>
