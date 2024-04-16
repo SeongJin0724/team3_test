@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react';
 
 export default function SubmitItemSale() {
@@ -33,7 +35,7 @@ export default function SubmitItemSale() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>판매신청</h2>
+      <h2 className='h2'>판매신청</h2>
       <input type="number" name="formKey" placeholder="formKey" onChange={handleChange} required />
       <input type="number" name="user_id" placeholder="user_id" onChange={handleChange} required />
       <input type="text" name="title" placeholder="title" onChange={handleChange} required />

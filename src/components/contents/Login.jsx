@@ -21,10 +21,12 @@ export default function Login() {
     };
   return (
     <form onSubmit={handleSubmit}>
-    <h2>로그인</h2>
-    <input type="email" name="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} required />
-    <input type="password" name="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
-    <button type="submit">로그인</button>
+      <div className='div'></div>
+    <h2 className="h2">로그인</h2>
+    <input type="email" className="input1" name="email" placeholder="이메일" onChange={(e) => setEmail(e.target.value)} required />
+    <input type="password" className="input2" name="password" placeholder="비밀번호" onChange={(e) => setPassword(e.target.value)} required />
+    <button type="submit" className="button">로그인</button>
   </form>
+  
   )
 }

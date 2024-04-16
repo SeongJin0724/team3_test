@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 import Main from '../components/section/Main'
 
 export default function Login() {
@@ -36,4 +36,4 @@ export default function Login() {
       <button type="submit">로그인</button>
     </form>
   );
-}
+}*/

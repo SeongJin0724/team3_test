@@ -1,0 +1,50 @@
+.h2 {
+    width: 30%;
+    left:650px;
+    top:120px;
+    position:absolute;
+    text-align: center;
+    background-color: rgb(104, 219, 152);
+    font-size: 26px;
+    font-weight: bold;
+    
+  }
+
+.input1 {
+    left:740px;
+    top:290px;
+    position: absolute;
+    width: 400px;
+    height: 25px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.input2 {
+  left:740px;
+  top:320px;
+  position: absolute;
+  width: 400px;
+  height: 25px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.button{
+  left:800px;
+  top:420px;
+  position: absolute;
+  background-color: rgb(104, 219, 152);
+  width: 250px;
+  height: 40px;
+  border-radius: 4px 4px 4px 4px;
+}
+
+.div{
+  left:688px;
+  top:220px;
+  position: relative;
+  width:450px;
+  height:300px;
+  border:0.5px solid green;
+  border-radius: 10px 10px 10px 10px;
+  padding: 20px;
+}
