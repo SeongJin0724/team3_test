@@ -35,49 +35,58 @@ export default function Signup() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>회원가입</h2>
+    <form onSubmit={handleSubmit} className="signUp">
+      <h2 className="signUp-header">회원가입</h2>
+
+      <label for="name">이름</label>
       <input
-        type="text"
-        name="user_id"
-        placeholder="User ID"
-        onChange={handleChange}
-        required
-      />
-      <input
+        id="name"
         type="text"
         name="name"
         placeholder="Name"
         onChange={handleChange}
         required
       />
+
+      <label for="email">이메일</label>
       <input
+        id="email"
         type="email"
         name="email"
         placeholder="Email"
         onChange={handleChange}
         required
       />
+
+      <label for="password">비밀번호</label>
       <input
+        id="password"
         type="password"
         name="password"
         placeholder="Password"
         onChange={handleChange}
         required
       />
+
+      <label for="tel">전화번호</label>
       <input
+        id="tel"
         type="text"
         name="tel"
         placeholder="Telephone"
         onChange={handleChange}
         required
       />
+
+      <label for="address">주소</label>
       <input
+        id="address"
         type="text"
         name="address"
         placeholder="Address"
         onChange={handleChange}
       />
+
       <button type="submit">가입하기</button>
     </form>
   );
