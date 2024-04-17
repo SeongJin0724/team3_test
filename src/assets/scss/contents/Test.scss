@@ -1,0 +1,297 @@
+html,
+body {
+  height: 100%;
+}
+
+/* 전체 컨테이너 */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 변경된 부분 */
+/* header */
+header {
+  width: 1000px; /* Header width of about 1000px */
+  margin: 10px auto; /* Align in the middle */
+  display: flex;
+  flex-direction: column;
+  /* Header boxes 1 and 2 aligned vertically */
+  height: 150px;
+}
+
+/* Header box 1 */
+.header-box1 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50%; /*높이 조정*/
+}
+
+.header-box1.right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-box1.right a {
+  color: #000;
+  text-decoration: none;
+  margin-left: 20px;
+  border-bottom: none;
+}
+
+/* Header box 2 */
+.header-box2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50%;
+}
+
+.header-box2-left img {
+  height: 60px;
+  margin-right: 20px;
+}
+
+.header-box2-left span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/*center form 수정*/
+.header-box2-center form {
+  display: flex;
+  align-items: center;
+  border: 2px solid #5f0080;
+  border-radius: 10px;
+  padding: 5px;
+  width: 400px;
+}
+
+.header-box2-center input[type="text"] {
+  border: none;
+  font-size: 16px;
+  margin-right: 10px;
+  flex-grow: 1; /*input 을 늘리게 위해 추가*/
+}
+
+.header-box2-center button[type="submit"] {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.header-box2-center form {
+  border-color: #5f0080;
+}
+
+.header-box2-center label {
+  color: #666;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.header-box2-center input[type="text"] {
+  border: none;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.header-box2-center button[type="submit"] {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.header-box2-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+}
+
+.header-box2-right img {
+  height: 30px;
+}
+
+/* 네비게이션 바 */
+
+nav {
+  width: 1000px;
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+/* Left */
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left img {
+  height: 30px;
+  margin-right: 5px;
+}
+
+.nav-left span {
+  font-size: 16px;
+}
+
+/* Center */
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 50px;
+}
+
+/*nav-center a 수정*/
+.nav-center a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+/* Right */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* button */
+.btn {
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 10px;
+  background-color: transparent;
+  color: #5f0080;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #5f0080;
+  color: #fff;
+}
+
+/* Box 1 */
+.box1 {
+  background-color: #eee;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.box1-content {
+  max-width: 100%;
+  text-align: center;
+}
+
+.box1-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.box1-content h2 {
+  color: #5f0080;
+  font-size: 24px;
+  margin-top: 20;
+  margin-bottom: 10px;
+}
+
+.box1-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Box 2 */
+.box2 {
+  width: 1000px; /* 너비 1000px로 설정 */
+  margin: 0 auto; /* 가운데 정렬 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  padding: 20px 0;
+}
+
+.box2-title {
+  color: #5f0080;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Card */
+.card-container {
+  display: flex;
+  justify-content: space-between; /* 카드들을 가로로 동일한 간격으로 배치 */
+  align-items: center;
+}
+
+.card {
+  width: 23%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.card-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /*img 늘리거나 줄여서 높이에 맞춤*/
+}
+
+.card-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(95, 0, 128, 0.8);
+  padding: 5px;
+}
+
+.card-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.card-content {
+  text-align: left;
+  padding: 10px;
+  height: 100%;
+  box-sizing: border-box;
+  /*border와 padding 영역을 요소의 크기에 포함시키도록 설정*/
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.card-contet p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  font-weight: bold;
+}

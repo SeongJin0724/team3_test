@@ -27,6 +27,5 @@ export default function Login() {
     <input type="password" className="input2" name="password" placeholder="비밀번호" onChange={(e) => setPassword(e.target.value)} required />
     <button type="submit" className="button">로그인</button>
   </form>
-  
   )
 }

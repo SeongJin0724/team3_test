@@ -9,6 +9,9 @@ const Pages2 = lazy(() => import("./pages/Pages2"));
 const Pages3 = lazy(() => import("./pages/Pages3"));
 const Pages4 = lazy(() => import("./pages/Pages4"));
 const Pages5 = lazy(() => import("./pages/Pages5"));
+const Pages6 = lazy(() => import("./pages/Pages6"));
+const Pages7 = lazy(() => import("./pages/Pages7"));
+const Guide = lazy(() => import("./pages/Guide"));
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
           <Route path="/pages3" element={<Pages3 />} />
           <Route path="/pages4" element={<Pages4 />} />
           <Route path="/pages5" element={<Pages5 />} />
+          <Route path="/pages6" element={<Pages6 />} />
+          <Route path="/pages7" element={<Pages7 />} />
+          <Route path="/guide" element={<Guide />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
