@@ -1,20 +1,24 @@
 import Guideline from "../../pages/Guideline";
-import Ins from "../../pages/Ins";
-import Policy1 from "../../pages/Policy1";
-import Policy2 from "../../pages/Policy2";
+import Standards from "../../pages/Standards";
+import Policy from "../../pages/Policy";
+import Penalty from "../../pages/Penalty";
+import Notice from "../../pages/Notice";
+import Service from "../../pages/Service";
+import Storeinfo from "../../pages/Storeinfo";
+import Acceptance from "../../pages/Acceptance";
 
 export const uldata1 = [
   {
-    title: "ins",
-    src: <Ins />,
+    title: "Standards",
+    src: <Standards />,
   },
   {
-    title: "policy1",
-    src: <Policy1 />,
+    title: "policy",
+    src: <Policy />,
   },
   {
-    title: "policy2",
-    src: <Policy2 />,
+    title: "penalty",
+    src: <Penalty />,
   },
   {
     title: "guideline",
@@ -25,18 +29,18 @@ export const uldata1 = [
 export const uldata2 = [
   {
     title: "notice",
-    src: "/notice",
+    src: <Notice />,
   },
   {
     title: "service",
-    src: "/service",
+    src: <Service />,
   },
   {
     title: "storeinfo",
-    src: "/storeinfo",
+    src: <Storeinfo />,
   },
   {
     title: "Acceptance",
-    src: "/Acceptance",
+    src: <Acceptance />,
   },
 ];

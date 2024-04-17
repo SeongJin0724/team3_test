@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Guideline() {
-  return <div>Guideline</div>;
+  return <div className="modal">Guideline</div>;
 }
