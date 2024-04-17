@@ -33,11 +33,10 @@
   }
   .footer_container {
     display: flex;
-    justify-content: start;
-    gap: 80px;
+
     .footer_nav {
       display: flex;
-      gap: 36px;
+      gap: 166px;
       .footer_info {
         li {
           padding: 10px 0px;
@@ -48,6 +47,11 @@
           padding: 10px 0px;
         }
       }
+    }
+    .footer_nav2 {
+      display: flex;
+      justify-content: end;
+      gap: 166px;
     }
   }
 }
