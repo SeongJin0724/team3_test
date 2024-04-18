@@ -14,19 +14,19 @@ import Personal from "../../pages/Personal";
 
 export const uldata1 = [
   {
-    title: "Standards",
+    title: "검수기준",
     src: <Standards />,
   },
   {
-    title: "policy",
+    title: "이용정책",
     src: <Policy />,
   },
   {
-    title: "penalty",
+    title: "페널티 정책",
     src: <Penalty />,
   },
   {
-    title: "guideline",
+    title: "커뮤니티 가이드라인",
     src: <Guideline />,
   },
 ];

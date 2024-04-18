@@ -21,7 +21,7 @@ const Talented = lazy(() => import("./pages/Talented"));
 const Partnership = lazy(() => import("./pages/Partnership"));
 const Terms = lazy(() => import("./pages/Terms"));
 const Personal = lazy(() => import("./pages/Personal"));
-
+const Question = lazy(() => import("./pages/Question"));
 function App() {
   return (
     <BrowserRouter>
@@ -45,6 +45,7 @@ function App() {
           <Route path="/partnership" element={<Partnership />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/personal" element={<Personal />} />
+          <Route path="/question" element={<Question />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
