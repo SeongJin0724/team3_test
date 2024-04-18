@@ -36,7 +36,7 @@
 
     .footer_nav {
       display: flex;
-      gap: 166px;
+      gap: 150px;
       .footer_info {
         li {
           padding: 10px 0px;
@@ -50,8 +50,16 @@
     }
     .footer_nav2 {
       display: flex;
-      justify-content: end;
-      gap: 166px;
+      gap: 1000px;
+      .footer_info3 {
+        float: right;
+      }
+    }
+    .footer_nav3 {
+      display: flex;
     }
   }
+}
+.FcCloseUpMode {
+  font-size: 30px;
 }
